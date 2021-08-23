@@ -9,37 +9,6 @@
   background-position: center;
   background-size: cover;
   z-index: -9;
-
-  &::before,
-  &::after {
-    // content: '';
-    position: absolute;
-    display: block;
-    left: 0;
-    height: 35vh;
-    width: 100vw;
-    pointer-events: none;
-  }
-
-  &::before {
-    top: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    opacity: 0.25;
-  }
-
-  &::after {
-    bottom: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    opacity: 0.75;
-  }
 }
 
 .filter {
@@ -84,7 +53,7 @@ input {
   padding: 12px 16px;
   font-size: 20px;
   border-radius: 12px;
-  background: hsla(231, 23%, 16%, 0.75);
+  background: $dark-col;
   color: hsl(0, 0%, 100%);
   transition: background 150ms ease, border 150ms ease;
   border: none;
