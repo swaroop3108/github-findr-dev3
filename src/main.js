@@ -4,6 +4,7 @@ import "./utils/filter.js";
 import ICOAppend from "./utils/ico_minpulate.js";
 import data from "./svg.js"
 import "./utils/load_check.js"
+import { CustomEase } from "./CustomEase.js"
 
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#search-ta_065ra").setAttribute("placeholder", "Search for users!")
@@ -105,7 +106,7 @@ function touchStart (e, c) {
 
     return false;
   } else if (!win_drag_area.classList.contains("minimized")) {
-    win_drag_area.setAttribute("style", `transition: all 550ms cubic-bezier(0, 1, 0, 1); top: 40px`)
+    // win_drag_area.setAttribute("style", `transition: all 550ms cubic-bezier(0, 1, 0, 1); top: 40px`)
     startPos = e.offsetY;
     curPos = e.clientY
     isDragging = true;
@@ -150,9 +151,16 @@ function touchEnd () {
 function maximize () {
   win_drag_area.classList.remove("minimized")
   win_drag_area.classList.remove("disabled")
-  win_drag_area.setAttribute("style", `transition: all 550ms cubic-bezier(0, 1, 0, 1); top: 40px`)
   min_arr.classList.remove("minimized")
   ser_area.classList.add("minimized")
+
+  var tl = gsap.timeline()
+  tl.to(".window_results", {
+    borderRadius: "24px",
+    height: "calc(100vh - 80px)",
+    width: "1100px",
+    top: "40px",
+  })
 }
 
 function minimize () {
@@ -160,10 +168,19 @@ function minimize () {
   win_drag_area.classList.add("minimized")
   ser_area.classList.remove("minimized")
 
-  //! detect device type: mobile/desktop
-  const dvcConDestop = navigator.userAgent.toLowerCase().indexOf("windows") !== -1 || navigator.userAgent.toLowerCase().indexOf("macintosh") !== -1 || navigator.userAgent.toLowerCase().indexOf("linux") !== -1;
+  // //! detect device type: mobile/desktop
+  // const dvcConDestop = navigator.userAgent.toLowerCase().indexOf("windows") !== -1 || navigator.userAgent.toLowerCase().indexOf("macintosh") !== -1 || navigator.userAgent.toLowerCase().indexOf("linux") !== -1;
 
-  if (dvcConDestop) {
-    min_arr.classList.add("minimized")
-  }
+  // if (dvcConDestop) {
+  //   min_arr.classList.add("minimized")
+  // }
+
+  var tl = gsap.timeline()
+  tl.to(".window_results", {
+    width: "512px",
+    height: "24px",
+    borderRadius: "12px 12px 0px 0px",
+    top: "calc(100% - 24px)",
+    transform: "translateX(-50%)",
+  })
 }
