@@ -1,0 +1,28 @@
+.navbar_mn {
+  position: fixed;
+  height: 100vh;
+  width: fit-content;
+  background: hsla(231, 23%, 16%, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .nav_sec {
+    padding: 8px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+
+    a {
+      color: rgba(255, 255, 255, 1);
+
+      .icon {
+        span {
+          display: block;
+          height: 32px;
+          width: 32px;
+        }
+      }
+    }
+  }
+}
