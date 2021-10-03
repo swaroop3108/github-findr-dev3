@@ -1,12 +1,3 @@
-<!--
-
-  * WARNING *
-  all the HTML you see is just dummy and was used to make up all the ui for this project. all of it will be removed soon
-
- -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,15 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Findr </title>
 
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.min.css"
     integrity="sha512-jN4O0AUkRmE6Jwc8la2I5iBmS+tCDcfUd1eq8nrZIBnDKTmCp5YxxNN1/aetnAH32qT+dDbk1aGhhoaw5cJNlw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- <script src="/router.js" defer></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src="/src/main.js" type="module"></script>
+  <script src="./src/main.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/OverlayScrollbars.min.js"
     integrity="sha512-B1xv1CqZlvaOobTbSiJWbRO2iM0iii3wQ/LWnXWJJxKfvIRRJa910sVmyZeOrvI854sLDsFCuFHh4urASj+qgw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -32,7 +22,7 @@
 
 <body>
 
-  <!-- please dont judge this shit -->
+  <!-- i will try to mess this up as much as possible, i don't want u to steal me code🤣 -->
 
   <div class="background" id="bg"></div>
 
@@ -105,7 +95,7 @@
       <span data-svg-item="arrowtop"></span>
     </div>
 
-    <div class="window_results minimized" tabindex="99">
+    <div class="window_results disabled minimized" tabindex="99">
       <div class="drag_indicator"></div>
       <div class="githubloader" data-svg-item="githubloader"></div>
 
@@ -451,33 +441,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="user_search bottom" tabindex="55555555555555555555">
-        <div class="deep_filter_">
-          <div class="deep_filter">
-            <span data-svg-item="filter"></span>
-          </div>
-
-          <div class="dl_012x dl_pos-center dl_inverted" id="filter-options">
-            <div class="dl_012x_item search_filter_cate" search-type="Users">
-              <span class="dl_012x_item_c_i" data-svg-item="Users"></span>
-              <span class="dl_012x_item_c_h">Users</span>
-            </div>
-            <div class="dl_012x_item search_filter_cate" search-type="Organizations">
-              <span class="dl_012x_item_c_i" data-svg-item="Organizations"></span>
-              <span class="dl_012x_item_c_h">Organizations</span>
-            </div>
-          </div>
-        </div>
-
-        <form action="" class="deep_search">
-          <input type="text" name="deep_user_search" id="deep_user_search">
-          <button type="submit">
-            <span data-svg-item="search"></span>
-          </button>
-        </form>
-
+        <div class="user_search bottom"></div>
       </div>
     </div>
   </div>
